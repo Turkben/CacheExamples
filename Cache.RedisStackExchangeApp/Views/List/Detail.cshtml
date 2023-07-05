@@ -1,0 +1,12 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>List Detail</h1>
+
+@foreach (var item in Model)
+{
+    
+    <h2>@item<a asp-controller="List" asp-action="Remove" asp-route-name="@item">Remove</a> </h2> 
+}    
